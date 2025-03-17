@@ -10,4 +10,6 @@ Activating virtual environment
 
 > `.\venv-drf\Scripts\activate`
 
+Installing django app called 'drfauth'
 
+> `django-admin startproject drfauth`
