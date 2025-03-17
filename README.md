@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-# drf-authentication
-example and source code for django rest framework token authentication
-
-
-For setting up virtual environment
-
-> `python -m virtualenv venv-drf`
-
-Activating virtual environment
-
-> `.\venv-drf\Scripts\activate`
-
-Installing django app called 'drfauth'
-
-> `django-admin startproject drfauth`
-
-Installing rest frameworkd
-
-> `pip install djangorestframework`
-
-Installing JWT framework
-
-> `pip install djangorestframework-simplejwt`
-=======
 # drf_auth
 
 ## Example and source code for django rest framework token authentication
@@ -49,6 +24,3 @@ Installing JWT framework
 
 #### * If there is an import problem on VSCode:
 > Ctrl + Shift + P -> Type and select 'Python: Select Interpreter' and select virtual environment
-
-
->>>>>>> fefd421 (created project and tested)
