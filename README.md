@@ -13,3 +13,11 @@ Activating virtual environment
 Installing django app called 'drfauth'
 
 > `django-admin startproject drfauth`
+
+Installing rest frameworkd
+
+> `pip install djangorestframework`
+
+Installing JWT framework
+
+> `pip install djangorestframework-simplejwt`
