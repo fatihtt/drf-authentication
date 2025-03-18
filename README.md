@@ -22,5 +22,8 @@
 
 * Add djangorestframework and api to the installed apps on settings of project
 
+* Add json web token plugin to api
+> `pip install djangorestframework-simplejwt`
+
 #### * If there is an import problem on VSCode:
 > Ctrl + Shift + P -> Type and select 'Python: Select Interpreter' and select virtual environment

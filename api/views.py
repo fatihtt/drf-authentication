@@ -4,18 +4,30 @@ from rest_framework.decorators import api_view
 from django.http import JsonResponse
 from api.serializers import UserSerializer
 from api.models import User
+from rest_framework import generics
+from rest_framework.permissions import IsAdminUser, IsAuthenticated, AllowAny
 
-@api_view(['GET'])
-def user_list(request):
-    users = User.objects.all()
-    serializer = UserSerializer(users, many=True)
-    return Response(serializer.data)
+class UserListApiView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [AllowAny]
 
-@api_view(['GET'])
-def user_detail(request, pk):
-    user = get_object_or_404(User, pk=pk)
-    serializer = UserSerializer(user)
-    return Response(serializer.data)
+class UserDetailApiView(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
+
+# @api_view(['GET'])
+# def user_list(request):
+#     users = User.objects.all()
+#     serializer = UserSerializer(users, many=True)
+#     return Response(serializer.data)
+
+# @api_view(['GET'])
+# def user_detail(request, pk):
+#     user = get_object_or_404(User, pk=pk)
+#     serializer = UserSerializer(user)
+#     return Response(serializer.data)
 
 
 @api_view(['GET'])
